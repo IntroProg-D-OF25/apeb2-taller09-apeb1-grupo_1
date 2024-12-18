@@ -28,5 +28,9 @@ public class Ejercicio_4 {
     }
 }
 /**
- *
+ *run:
+La media aritmetica es: 9.538461538461538
+Numeros arriba de la media aritmética: 8
+Numeros bajo la media aritmética: 5
+Numeros iguales a la media aritmética: 0
  */
