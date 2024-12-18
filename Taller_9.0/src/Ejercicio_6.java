@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejercicio_06 {
+public class Ejercicio_6 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         String[] estudiantes = {"Kimberly", "Hogan", "Teresa", "Luis", "Mark", "Jennifer", "Alcides"};
