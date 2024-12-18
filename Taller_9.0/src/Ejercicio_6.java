@@ -1,34 +1,19 @@
-
 import java.util.Scanner;
-
-public class Ejercicio_6 {
-
+public class Ejercicio_06 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         String[] estudiantes = {"Kimberly", "Hogan", "Teresa", "Luis", "Mark", "Jennifer", "Alcides"};
         String inicial;
         boolean bandera = true;
-
-        while (bandera) {
-            System.out.println("Ingrese una letra:");
-            inicial = entrada.nextLine().toUpperCase();
-
-            boolean encontrado = false;
-            for (String estudiante : estudiantes) {
-
-                if (estudiante.toUpperCase().charAt(0) == inicial.charAt(0)) {
-                    System.out.println("¡La letra coincide con el nombre: " + estudiante + "!");
-                    encontrado = true;
-                    break;
+        while(bandera){
+            System.out.println("Ingrese una letra");
+            inicial = entrada.nextLine();
+            for (int i = 0; i < 7 ; i++) {
+                if (estudiantes[i].startsWith(inicial)) {
+                    System.out.println("La letra '" + inicial + "' coincide con la primera letra del nombre '" + estudiantes[i] + "'");
+                    bandera = false;
                 }
             }
-
-            if (encontrado) {
-                bandera = false;
-            } else {
-                System.out.println("No se encontró ninguna coincidencia. Intente de nuevo.");
-            }
         }
-
     }
 }
