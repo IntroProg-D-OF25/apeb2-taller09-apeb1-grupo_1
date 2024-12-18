@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class Ejercicio_03 {
+public class Ejercicio_3 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         ArrayList<String> marcas = new ArrayList<>();
