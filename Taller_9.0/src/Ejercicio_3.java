@@ -1,37 +1,31 @@
-
-public class Ejercicio_3 {
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Ejercicio_03 {
     public static void main(String[] args) {
-        int limite = 4;  
-        for (int i = 1; i <= limite; i++) {
-            
-            for (int j = i; j < limite; j++) {
-                System.out.print(" ");  
+        Scanner teclado = new Scanner(System.in);
+        ArrayList<String> marcas = new ArrayList<>();
+        System.out.print("Ingrese el número de marcas que desea almacenar: ");
+        int cantidad = teclado.nextInt();
+        System.out.println("Ingrese los nombres de las marcas (se ignorarán las que comiencen con A, C, T): ");
+        while (marcas.size() < cantidad) {
+            String marca = teclado.next();
+            if (marca.startsWith("A") || marca.startsWith("C") || marca.startsWith("T") || marca.startsWith("a") || marca.startsWith("c") || marca.startsWith("t")) {
+                System.out.println("La marca " + marca + " no es valida");
+            } else {
+                marcas.add(marca);
             }
-            for (int j = 1; j <= (2 * i - 1); j++) {
-                System.out.print("*");  
-            }
-            System.out.println();
         }
-           for (int i = limite - 1; i >= 1; i--) {
-            for (int j = limite; j > i; j--) {
-                System.out.print(" "); 
-            }
-            
-            for (int j = 1; j <= (2 * i - 1); j++) {
-                System.out.print("*");  
-            }
-            System.out.println();
-        }
-    }
-    
+        System.out.println("Las " + cantidad + " marcas almacenadas: " + marcas);
+    }    
 }
- /**
-  * run:
-   *
-  ***
- *****
-*******
- *****
-  ***
-   *
-  */
+/**
+ * run:
+Ingrese el número de marcas que desea almacenar: 5
+Ingrese los nombres de las marcas (se ignorarán las que comiencen con A, C, T): 
+HONOR
+XIAOMI
+INTEL
+NOKIA
+EPSON
+Las 5 marcas almacenadas: [HONOR, XIAOMI, INTEL, NOKIA, EPSON]
+ */
