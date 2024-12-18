@@ -1,32 +1,39 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author kleiv
- */
-public class Ejercicio_2 {
-
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Ejercicio_02 {
     public static void main(String[] args) {
-        int limite = 4;
-        for (int i = 1; i <= limite; i++) {
-
-            for (int j = i; j < limite; j++) {
-                System.out.print(" ");
+        ArrayList<Integer> fibonacci = new ArrayList<>();
+        ArrayList<Integer> primos = new ArrayList<>();
+        Scanner teclado = new Scanner(System.in);
+        int num, suma, primero = 0, segundo = 1, j = 1, x, h = 2;
+        System.out.println("Ingrese un limite: ");
+        num = teclado.nextInt();
+        for (int i = 1; i <= num; i++) {
+            fibonacci.add(segundo);
+            suma = primero + segundo;
+            primero = segundo;
+            segundo = suma;
+        }
+        while (j <= num) {
+            x = 0;
+            for (int i = 2; i <= Math.sqrt(h); i++) {
+                if (h % i == 0) {
+                   x ++; 
+                }
+            } 
+            if (x == 0) {
+                primos.add(h);
+                j++;
             }
-            for (int j = 1; j <= (2 * i - 1); j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+            h ++;
+        }
+        for (int i = 0; i < num; i++) {
+            System.out.print( fibonacci.get(i) + "/" + primos.get(i) + " ");
         }
     }
 }
 /**
- * run:
-   *
-  ***
- *****
-*******
+ * Ingrese un limite: 
+7
+1/2 1/3 2/5 3/7 5/11 8/13 13/17 
  */
