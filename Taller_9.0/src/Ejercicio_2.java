@@ -1,11 +1,11 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class Ejercicio_02 {
+public class Ejercicio_2 {
     public static void main(String[] args) {
         ArrayList<Integer> fibonacci = new ArrayList<>();
         ArrayList<Integer> primos = new ArrayList<>();
         Scanner teclado = new Scanner(System.in);
-        int num, suma, primero = 0, segundo = 1, j = 1, x, h = 2;
+        int num, suma, primer = 0, segundo = 1, j = 1, x, h = 2;
         System.out.println("Ingrese un limite: ");
         num = teclado.nextInt();
         for (int i = 1; i <= num; i++) {
@@ -33,7 +33,8 @@ public class Ejercicio_02 {
     }
 }
 /**
- * Ingrese un limite: 
+ * run:
+Ingrese un limite: 
 7
-1/2 1/3 2/5 3/7 5/11 8/13 13/17 
+1/2 1/3 2/5 3/7 5/11 8/13 13/17
  */
